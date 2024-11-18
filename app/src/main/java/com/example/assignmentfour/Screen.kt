@@ -88,12 +88,12 @@ fun CustomListViewScreen() {
             topBar = {
                 TopAppBar(title = { Text("Custom ListView") })
             }
-        ) { paddingValues -> // Use paddingValues to avoid overlapping
+        ) { paddingValues -> 
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(paddingValues) // Apply padding from Scaffold
-                    .padding(16.dp) // Additional padding for aesthetics
+                    .padding(paddingValues) 
+                    .padding(16.dp) 
             ) {
                 items(familyMembers.size) { index ->
                     CustomListItem(familyMembers[index])
@@ -147,7 +147,7 @@ fun ExpandableListViewScreen() {
         topBar = {
             TopAppBar(title = { Text("Expandable ListView") })
         }
-    ) { paddingValues -> // Add paddingValues
+    ) { paddingValues -> 
         AndroidView(
             factory = { context ->
                 ExpandableListView(context).apply {
@@ -156,8 +156,7 @@ fun ExpandableListViewScreen() {
             },
             modifier = Modifier
                 .fillMaxSize()
-                .padding(paddingValues) // Apply padding from Scaffold
-        )
+                .padding(paddingValues) 
     }
 }
 
